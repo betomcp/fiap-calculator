@@ -1,0 +1,58 @@
+
+
+:host{
+
+
+  header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 20vh;
+    box-shadow: 0 1px 2px rgb(19, 19, 19);
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1{
+      font-size: 4rem;
+      font-weight: lighter;
+      color: rgb(126, 8, 55);
+      letter-spacing: 8px;
+    }
+
+    h2{
+      font-weight: lighter;
+      color: rgb(63, 63, 63);
+    }
+  }
+
+  main{
+    margin-top: 20vh;
+    min-height: 80vh;
+    padding: 2rem;
+  }
+
+  .new_subject{
+    text-align: center;
+
+    button{
+      background-color: transparent;
+      // border: dashed 2px rgb(200, 200, 200);
+      padding: 1rem;
+      border: none;
+      width: 70%;
+      font-size: 2rem;
+      color: rgb(64, 64, 64);
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='15' ry='15' stroke='%23343434FF' stroke-width='4' stroke-dasharray='12%2c 21' stroke-dashoffset='22' stroke-linecap='square'/%3e%3c/svg%3e");
+      border-radius: 15px;
+    }
+
+    button:hover{
+      cursor: pointer;
+    }
+  }
+
+}

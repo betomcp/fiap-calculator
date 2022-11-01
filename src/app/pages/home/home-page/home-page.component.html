@@ -1,0 +1,12 @@
+<header>
+  <h1>FIAP</h1>
+  <h2>Descubra quanto precisa para passar de ano!</h2>
+</header>
+<main>
+    <app-subject *ngFor="let item of subjects"></app-subject>
+    <div class="new_subject">
+      <button (click)="newSubject()">Nova Materia +</button>
+    </div>
+</main>
+
+<!-- <app-name-modal></app-name-modal> -->

@@ -1,0 +1,55 @@
+<div class="card_subject">
+  <div class="subject_header">
+    <h2><input [style]="bordeActive" class="name_input" type="text" [disabled]="isDisable" [(ngModel)]="subject.name"></h2>
+    <button (click)="editName()">{{editValue}}</button>
+  </div>
+  <div class="subject_body">
+    <div class="flex_column">
+      <h5>** Caso já tenha a media do primeiro semestre, pode informa-la diretamente</h5>
+      <h5>** Informe as notas no formato 0 a 10 (exemplo: 95,7 = 9,57)</h5>
+      <h4>Semestre 1</h4>
+      <div class="subject_input_title">
+        <p>CP 1</p>
+        <p>CP 2</p>
+        <p>CP 3</p>
+        <p>SPR 1</p>
+        <p>SPR 2</p>
+        <p>GS 1</p>
+        <p>MED</p>
+      </div>
+      <div class="subject_inputs">
+        <input type="number" [(ngModel)]="subject.sem1Cp1">
+        <input type="number" [(ngModel)]="subject.sem1Cp2">
+        <input type="number" [(ngModel)]="subject.sem1Cp3">
+        <input type="number" [(ngModel)]="subject.sprint1">
+        <input type="number" [(ngModel)]="subject.sprint2">
+        <input type="number" [(ngModel)]="subject.sem1Gs">
+        <input type="number" [(ngModel)]="subject.sem1Med">
+      </div>
+      <h4>Semestre 2</h4>
+      <div class="subject_input_title">
+        <p>CP 1</p>
+        <p>CP 2</p>
+        <p>CP 3</p>
+        <p>SPR 1</p>
+        <p>SPR 2</p>
+        <p>GS 1</p>
+        <p>MED</p>
+      </div>
+      <div class="subject_inputs">
+        <input type="number" [(ngModel)]="subject.sem2Cp1">
+        <input type="number" [(ngModel)]="subject.sem2Cp2">
+        <input type="number" [(ngModel)]="subject.sem2Cp3">
+        <input type="number" [(ngModel)]="subject.sprint3">
+        <input type="number" [(ngModel)]="subject.sprint4">
+        <input type="number" [(ngModel)]="subject.sem2Gs">
+        <input type="number" [(ngModel)]="subject.sem2Med">
+      </div>
+    </div>
+    <div class="results">
+      <p>Você tem: {{ toFixedOnTwo(getCalc().year) }} na média do ano.</p>
+      <p>Você precisa de: {{ toFixedOnTwo(getCalc().needs) }} para atingir a média.</p>
+      <p>Isso equivale a {{  toFixedOnTwo(getCalc().gsPoints) }} pontos na GS</p>
+    </div>
+  </div>
+</div>
